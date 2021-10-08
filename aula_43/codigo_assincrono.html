@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event loop - código assíncrono</title>
+</head>
+<body>
+
+
+  <script>
+
+    /* Código assíncrono não bloqueante */
+
+    (function () {
+      console.log("Código assíncrono");
+      console.log("Início");
+
+      function dois() {
+        setTimeout(() => {
+          console.log("Dois");
+        }, 5000);
+      }
+
+      function um() {
+        setTimeout(() => {
+          console.log("Um");
+        }, 0);
+
+        dois();
+        console.log("Três");
+      }
+
+      um();
+      console.log("Fim");
+    }) ();
+
+    /* "Javascript usa um modelo assíncrono e não bloqueante
+     * com um loop de eventos implementada em um só fio de execução
+     * (single thread), para operação de entrada e saída (i/o)".
+     */
+
+  </script>
+
+</body>
+</html>

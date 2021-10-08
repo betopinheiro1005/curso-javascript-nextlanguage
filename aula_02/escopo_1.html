@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escopo de variáveis</title>
+</head>
+<body>
+
+  <script>
+
+    var msg = "Olá mundo!";
+    let nome = "Roberto Pinheiro"
+    console.log(msg);
+    console.log(nome);
+    console.log("\n");
+
+    /* variáveis declaradas com var tem o seu conteúdo listado no objeto window,
+     isso não acontece com variáveis declaradas com let.
+     O objeto window representa o objeto global do navegador (browser). */
+
+    console.log(window.msg);
+    console.log(window.nome);
+    console.log("\n");
+
+  </script>
+</body>
+</html>

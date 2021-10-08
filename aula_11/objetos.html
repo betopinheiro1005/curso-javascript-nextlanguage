@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objetos - Declaração e acesso aos dados</title>
+</head>
+<body>
+
+  <script>
+    let msg = new String("Hello world");
+    console.log(msg);
+
+    const obj1 = {}  // declarando um objeto vazio
+    console.log(obj1);
+
+    const obj2 = new Object();
+    console.log(obj2);
+
+    /* dentro de um objeto as variáveis são chamadas de atributos/propriedades e as funções são chamadas de métodos */
+
+    const dados = {
+      nome: "Rodrigo",
+      sobrenome: "Muniz",
+      idade: 35,
+      hobby: ['ler', 'capoeira', 'tocar violão', 'futebol'],
+      brasileiro: true,
+      contato: {
+        email: "rodrigomuniz@gmail.com",
+        telefone: "(21)98571-3280"
+      },
+      nomeCompleto: function (){
+        return this.nome + " " + this.sobrenome;
+      }
+    }
+
+    console.log(dados);
+    console.log("Nome completo: " + dados.nomeCompleto());
+    console.log("Idade: " + dados.idade + " anos");
+    console.log("Email: " + dados['contato']['email']);
+    console.log("Telefone: " + dados.contato.telefone);
+    console.log("hobby favorito: " + dados.hobby[0]);
+
+  </script>
+
+</body>
+</html>

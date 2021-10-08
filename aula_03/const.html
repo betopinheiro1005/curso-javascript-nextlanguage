@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variáveis do tipo const</title>
+</head>
+<body>
+
+  <script>
+    /* O nome de uma variável do tipo const deve ser escrito com todas as letras em maiúsculo.
+    Variáveis do tipo const não podem ter o seu valor primitivo alterado.
+    Objetos e arrays declarados como const, podem ser alterados (podem ser adicionados ou excluídos elementos).
+    Com exceção das constantes nativas do javascript, obrigatoriamente devem ser inicializadas.  */
+
+    console.log(Math.PI);   // PI é uma constante nativa do objeto Math
+
+    /* Um objeto é uma coleção de atributos e valores */
+
+    const OBJ = {
+      nome: "Rodrigo",
+      sobrenome: "Muniz",
+      idade: 35
+    }
+
+    const CORES = ['branco', 'preto', 'verde'];
+
+    console.log(OBJ);
+    // console.log("Nome: " + OBJ.nome + "\nSobrenome: " + OBJ.sobrenome + "\nIdade: " + OBJ.idade + " anos");
+    console.log("Nome: " + OBJ['nome'] + "\nSobrenome: " + OBJ['sobrenome'] + "\nIdade: " + OBJ['idade']);
+
+    console.log(CORES);
+
+    OBJ.email = "rodrigomuniz@gmail.com";
+    CORES.push('vermelho');
+
+    console.log(OBJ);
+    console.log(CORES);
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date</title>
+</head>
+<body>
+
+  <script>
+
+    /* Obtendo dados da data atual */
+
+    let data = new Date();
+    console.log(data);
+    console.log(data.getDate());
+    console.log(data.getDay());
+    console.log(data.getMonth());
+    console.log(data.getFullYear());
+
+    console.log(data.getHours());
+    console.log(data.getMinutes());
+    console.log(data.getSeconds());
+    console.log(data.getMilliseconds());
+
+    console.log(data.toString());
+    console.log(data.toDateString());
+
+    console.log(data.toLocaleString());
+    console.log(data.toLocaleDateString());
+    console.log(data.toLocaleTimeString());
+
+    console.log(data.getUTCDate());
+    console.log(data.getUTCHours());
+
+    console.clear();
+
+    console.log(Date.now());   /* Quantidade de segundos que se passaram desde 01/jan/1970 (timestamp). Pode ser usado para fazer cálculo de datas */
+
+    /* Operações com datas - Use o Moment.js (baixe na Internet) - https://momentjs.com/ */
+
+    let niverMuniz = new Date (1985, 2, 9);
+
+    console.log(niverMuniz);
+
+
+
+
+  </script>
+</body>
+</html>

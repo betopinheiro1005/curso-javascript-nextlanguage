@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desestruturação - objetos</title>
+</head>
+<body>
+
+  <script>
+    /* Desestruturação é uma forma de possibilitar extrair dados de um array ou objeto em variáveis distintas */
+
+    let dados = {
+      nome: "Rodrigo",
+      sobrenome: "Muniz",
+      idade: 35
+    }
+
+    /* Para que a desestruturação funcione em objetos é necessário criar variáveis com o mesmo nome das propriedades do objeto*/
+
+    let {nome, sobrenome, idade} = dados;
+
+    console.log(nome);
+    console.log(sobrenome);
+    console.log(idade);
+
+  </script>
+
+</body>
+</html>

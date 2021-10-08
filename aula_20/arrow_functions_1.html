@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Functions</title>
+</head>
+<body>
+
+  <script>
+
+    const olaMundo = function(){
+      console.log("Olá mundo 1");
+    }
+
+    olaMundo();
+
+    console.log("----------------------------------");
+
+    /* ==================================== */
+
+    function olaMundo2(){
+      console.log("Olá mundo 2");
+    }
+
+    olaMundo2();
+
+    console.log("----------------------------------");
+
+    /* ==================================== */
+
+    const olaMundo3 = () => {
+      console.log("Olá mundo 3");
+    }
+
+    olaMundo3();
+
+    console.log("----------------------------------");
+
+    /* ==================================== */
+
+    const olaMundo4 = () => console.log("Olá mundo 4");
+
+    olaMundo4();
+
+    console.log("----------------------------------");
+
+    /* ==================================== */
+
+    const saudar = nome => console.log(`Olá, ${nome}`);
+    saudar('Rodrigo');
+
+    console.log("----------------------------------");
+
+    /* ==================================== */
+
+    const somar = function(a, b){
+      return a + b;
+    }
+
+    console.log(somar(7,8));
+
+    console.log("----------------------------------");
+
+    /* ==================================== */
+
+    const somar2 = (a, b) => a + b;
+
+    console.log(somar2(4,9));
+
+    console.log("----------------------------------");
+
+    /* ==================================== */
+
+    const msg = (txt1, txt2, txt3) => {
+      console.log(txt1);
+      console.log(txt2);
+      console.log(txt3);
+    };
+
+    msg("Rodrigo", "Roberto", "Bruno");
+
+    console.log("----------------------------------");
+
+  </script>
+
+</body>
+</html>

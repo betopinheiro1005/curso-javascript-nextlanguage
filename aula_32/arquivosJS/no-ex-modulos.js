@@ -1,0 +1,1 @@
+console.log("Impressão dentro do arquivo no-ex-modulos.js");

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Função com passagem opcional de parâmetros</title>
+</head>
+<body>
+
+  <script>
+
+    /* Função com passagem opcional de parâmetros e retorno de valor */
+
+    function msg(texto1 = '', texto2 = ''){
+      if((texto1 == '') && (texto2 == '')){
+        return 'Seja bem-vindo ao nosso site';
+      } else {
+        return 'Seja bem-vindo, ' + texto1 + ' ' + texto2;
+      }
+    }
+
+    let saudar1 = msg('Roberto', 'Pinheiro');
+    let saudar2 = msg('Roberto');
+    let saudar3 = msg();
+
+    console.log(saudar1);
+    console.log(saudar2);
+    console.log(saudar3);
+
+  </script>
+
+</body>
+</html>

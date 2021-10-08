@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototype</title>
+</head>
+<body>
+
+  <script>
+
+    /*
+    POO:
+    - classes: é o modelo a seguir
+    - objetos: é uma instância (cópia do modelo) de uma classe
+      - atributos: característica ou propriedade de um objeto. Variáveis dentro de um objeto.
+      - métodos: ações que os objetos podem realizar. Funções dentro de um objeto.
+    */
+
+    /* Função construtora */
+
+    function Animal (nome, genero) {
+      /* atributos */
+      this.nome = nome;
+      this.genero = genero;
+    }
+
+     /* métodos */
+     Animal.prototype.realizarSom = function (som){
+       console.log(som);
+     }
+
+    Animal.prototype.outroMetodoQualquer = function (action) {
+      console.log(`Executa uma ação em cima do retornado em ${action}.`);
+    }
+
+    const scoobyDoo = new Animal("Scooby Doo", "macho");
+    const pernalonga = new Animal("Pernalonga", "macho");
+
+    console.log(scoobyDoo);
+    console.log(pernalonga);
+
+    scoobyDoo.realizarSom("Scooby dooby doo");
+    scoobyDoo.outroMetodoQualquer("Action qualquer 1");
+
+    pernalonga.realizarSom("O que é que há, velhinho?");
+    pernalonga.outroMetodoQualquer("Action qualquer 1");
+
+  </script>
+
+</body>
+</html>

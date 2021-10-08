@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Functions</title>
+</head>
+<body>
+
+  <script>
+
+    const alunos = ["Maria", "Cassio", "Solange", "Reinaldo", "Vitor"];
+
+    alunos.forEach(function(el, index){
+      console.log(`${index + 1} - ${alunos[index]}`);
+    });
+
+    console.log("-----------------------------");
+
+    alunos.forEach((el, index) => console.log(`${index + 1} - ${alunos[index]}`));
+
+    console.log("-----------------------------");
+
+    /* ---------------------------------------------------------------- */
+
+    function cachorro(){
+      console.log(this);
+    }
+
+    cachorro();
+
+    console.log("-----------------------------");
+
+    const cachorro2 = {
+      nome: "Link",
+      latir(){
+        console.log(this);
+      }
+    };
+
+    cachorro2.latir();
+
+  </script>
+
+</body>
+</html>

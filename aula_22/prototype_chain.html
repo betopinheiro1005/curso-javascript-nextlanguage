@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototype chain</title>
+</head>
+<body>
+
+  <script>
+
+    function Animal (nome, genero) {
+      /* atributos */
+      this.nome = nome;
+      this.genero = genero;
+    }
+
+     /* métodos */
+     Animal.prototype.realizarSom = function (som){
+       console.log(som);
+     }
+
+    Animal.prototype.outroMetodoQualquer = function (action) {
+      console.log(`Executa uma ação em cima do retornado em ${action}.`);
+    }
+
+    /* Herança protótipos */
+
+    function Cachorro(nome, genero, raca) {
+      /* super(); */
+      this.super = Animal;  /* super é o protótipo que iremos nos basear para realizar a herança */
+      this.super(nome, genero);
+      this.raca = raca;
+    }
+
+    /* Cachorro está herdando de Animal */
+    Cachorro.prototype = new Animal();
+
+    Cachorro.prototype.constructor = Cachorro;
+
+    /* Sobrescrever método do protótipo pai */
+
+    Cachorro.prototype.outroMetodoQualquer = function () {
+      console.log("Tenho outra ação dentro do método filho, cachorro.");
+    }
+
+    Cachorro.prototype.latir = function(){
+      console.log("au au au au au");
+    }
+
+    const scoobyDoo = new Cachorro("Scooby Doo", "macho", "Bloodhound");
+    const pernalonga = new Animal("Pernalonga", "macho");
+
+    console.log(scoobyDoo);
+    console.log(pernalonga);
+
+    scoobyDoo.realizarSom("Scooby dooby doo");
+    scoobyDoo.outroMetodoQualquer("Action qualquer 01");
+    scoobyDoo.latir();
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for in</title>
+</head>
+<body>
+
+  <script>
+
+    /* for in é um laço utilizado para iterar elementos de um objeto primitivo */
+
+    const rodrigoMuniz = {
+      nome: "Rodrigo",
+      sobrenome: "Muniz",
+      idade: 35,
+      hobbys: ["Capoeira", "Estudar", "Treinar", "Violão"],
+      brasileiro: true,
+      contato: {
+        email: "rodrigomuniz@gmail.com",
+        telefone: "(21) 98356-2460"
+      }
+    }
+
+    for (const propriedade in rodrigoMuniz) {
+      console.log(`key: ${propriedade} - value: ${rodrigoMuniz[propriedade]}`);
+    }
+
+  </script>
+
+</body>
+</html>

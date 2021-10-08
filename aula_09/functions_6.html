@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Função expressada</title>
+</head>
+<body>
+
+  <script>
+
+    /* No caso de função expressada, se ela for chamada antes de sua declaração, será gerado um erro */
+
+    teste();  /* vai gerar um erro */
+
+    let teste = function (){
+      console.log("Primeira linha do código da função");
+      console.log("Segunda linha do código da função");
+      console.log("Terceira linha do código da função");
+    }
+
+    /* No Javascript, para que não seja gerado nenhum erro, independentemente do tipo de função,
+     siga o seguinte roteiro:
+      1 - importação de módulos
+      2 - declaração de variáveis
+      3 - declaração de funções
+      4 - chamada da função
+    */
+
+  </script>
+
+</body>
+</html>

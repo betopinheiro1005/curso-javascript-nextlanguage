@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      margin: 30px;
+    }
+    #horario{
+      font-family: monospace;
+      font-size: 27px;
+      width: 120px;
+      height: 40px;
+      background-color: rgba(255,255, 0, 0.3);
+      border: 1px solid black;
+      padding: 25px;
+    }
+    #bt_iniciar, #bt_parar{
+      padding: 10px 20px;
+      margin: 15px 15px 0px 0px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+  <title>Método setInterval</title>
+</head>
+<body>
+
+  <div id = "horario"></div>
+  <button id="bt_iniciar">Start</button>
+  <button id="bt_parar">Stop</button>
+
+  <script>
+
+    let horario = document.getElementById("horario");
+    let temporizador;
+
+    document.getElementById("bt_iniciar").addEventListener("click", function(){
+        temporizador = setInterval(() => {
+          horario.innerHTML = new Date().toLocaleTimeString();
+        }, 1000);
+    });
+
+    document.getElementById("bt_parar").addEventListener("click", function(){
+      clearInterval(temporizador);
+    });
+
+  </script>
+</body>
+</html>

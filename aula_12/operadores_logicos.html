@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operadores lógicos</title>
+</head>
+<body>
+
+  <script>
+
+    let idade, brasileiro, ficha_limpa;
+
+    idade = 20;
+    brasileiro = true;
+
+    /* operador && (and) */
+    if((idade > 18) && (brasileiro)){
+      console.log("Pode se candidatar");
+    }
+
+    /* operador || (or) */
+
+    idade = 20;
+    brasileiro = false;
+
+    if((idade < 18) || (brasileiro == false)){
+      console.log("Não pode se candidatar");
+    }
+
+    /* operador ! (not) */
+
+    ficha_limpa = false;
+
+    if(!ficha_limpa){
+      console.log("Não pode se candidatar");
+    }
+
+  </script>
+
+</body>
+</html>

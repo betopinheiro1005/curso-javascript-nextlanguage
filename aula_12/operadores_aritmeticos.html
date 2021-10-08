@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operadores aritméticos</title>
+</head>
+<body>
+
+  <script>
+
+    let n1 = 11;
+    let n2 = 3;
+    let soma, subtracao, multiplicacao, divisao, resto, resultado, print;
+
+    soma = n1 + n2;
+    print = `${n1} + ${n2} = ${soma}`;
+    exibe(print);
+
+    subtracao = n1 - n2;
+    print = `${n1} - ${n2} = ${subtracao}`;
+    exibe(print);
+
+    multiplicacao = n1 * n2;
+    print = `${n1} * ${n2} = ${multiplicacao}`;
+    exibe(print);
+
+    divisao = 11 / 3;
+    print = `${n1} / ${n2} = ${divisao}`;
+    exibe(print);
+
+    resto = n1 % n2;
+    print = `${n1} % ${n2} = ${resto}`;
+    exibe(print);
+
+    function exibe(print){
+      console.log(print + "\n");
+    }
+
+  </script>
+
+</body>
+</html>

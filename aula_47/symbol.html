@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symbol</title>
+</head>
+<body>
+
+  <script>
+    /* É um tipo de dado primitivo criado a partir do ECMA6. */
+    /* É um tipo de dado muito peculiar. Uma vez criado, seu valor vai ser privado e somente para uso interno.
+     * Não se pode utilizr o operador new para criá-lo.
+    */
+
+    let id1 = "Olá";
+    let id2 = "Olá";
+
+    console.log(id1 === id2);
+
+    /* Symbol cria uma referência única. Não permite sobrescreve-las. */
+
+    let id3 = Symbol("id3");
+    let id4 = Symbol("id4");
+
+    console.log(id3 === id4);
+    console.log(id3, id4);
+
+    const NOME = Symbol("nome");
+    const SAUDACAO = Symbol("saudação");
+
+    const pessoa = {
+      [NOME]: "Rodrigo",
+      idade: 36
+    }
+
+    console.log(pessoa);
+
+    pessoa.NOME = "Rodrigo Muniz";
+    console.log(pessoa);
+
+    console.log(pessoa.NOME);
+    console.log(pessoa[NOME]);
+
+    pessoa[SAUDACAO] = function(){
+      console.log("Olá!!!");
+    }
+
+    console.log(pessoa);
+
+    pessoa[SAUDACAO]();
+
+    for(let propriedade in pessoa){
+      console.log(propriedade);
+      console.log(pessoa[propriedade]);
+    }
+
+    console.log(Object.getOwnPropertySymbols(pessoa));
+
+  </script>
+</body>
+</html>

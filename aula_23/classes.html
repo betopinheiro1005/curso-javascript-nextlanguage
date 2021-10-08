@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classes</title>
+</head>
+<body>
+
+  <script>
+
+    // function Animal (nome, genero) {
+    //   /* atributos */
+    //   this.nome = nome;
+    //   this.genero = genero;
+    // }
+
+    //  /* métodos */
+    //  Animal.prototype.realizarSom = function (som){
+    //    console.log(som);
+    //  }
+
+    // Animal.prototype.outroMetodoQualquer = function (action) {
+    //   console.log(`Executa uma ação em cima do retornado em ${action}.`);
+    // }
+
+
+    class Animal {
+
+      /* constructor é um método especial que se executa no momento de instanciar a classe. */
+      constructor(nome, genero){
+        this.nome = nome;
+        this.genero = genero;
+      }
+
+      /* métodos */
+      realizarSom (som){
+        console.log(som);
+      }
+
+      outroMetodoQualquer (action) {
+        console.log(`Executa uma ação em cima do retornado em ${action}. E retorno nome = ${this.nome}`);
+      }
+
+    }
+
+    const ratatouille = new Animal("Ratatouille", "Macho");
+    ratatouille.realizarSom("Se somos aquilo que comemos, então só quero comer coisas boas");
+
+    const margarida = new Animal("Margarida", "Femea");
+    margarida.outroMetodoQualquer("Bater no Donald");
+
+    console.log(ratatouille);
+    console.log(margarida);
+
+    /* ================================================== */
+
+    class Cachorro extends Animal{
+      constructor(nome, genero, raca){
+        super(nome, genero);
+        this.raca = raca;
+      }
+
+      outroMetodoQualquer(action){
+        console.log(`Nova ação - ${action}`);
+      }
+
+      latir(){
+        console.log("au au au au au");
+      }
+    }
+
+    const scoobyDoo = new Cachorro("Scooby Doo", "Macho", "Bloodhound");
+
+    console.log(scoobyDoo)
+    scoobyDoo.outroMetodoQualquer("Ação do Scooby");
+    scoobyDoo.latir();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objeto Math</title>
+</head>
+<body>
+
+  <script>
+
+    /* Math é um objeto estático nativo do Javascript */
+
+    console.log(Math);
+    console.log(Math.PI);
+
+    console.log("--------------------");
+
+    /* abs - devolve o valor absoluto de um número */
+    console.log(Math.abs(7.8));
+    console.log(Math.abs(-7.8));
+    console.log("--------------------");
+
+    /* eeil - arredondamento ao posterior imediato */
+    console.log(Math.ceil(7.8));
+    console.log(Math.ceil(7.1));
+    console.log("--------------------");
+
+    /* floor - arredondamento ao anterior imediato */
+    console.log(Math.floor(7.8));
+    console.log(Math.floor(7.1));
+    console.log("--------------------");
+
+    /* round - arredondamento */
+    console.log(Math.round(7.8));
+    console.log(Math.round(7.49));
+    console.log(Math.round(7.58));
+    console.log(Math.round(7.2));
+    console.log("--------------------");
+
+    /* sqrt - raiz quadrada */
+    console.log(Math.sqrt(81));
+    console.log("--------------------");
+
+    /* pow - elevar à potência */
+    console.log(Math.pow(3, 3));
+    console.log("--------------------");
+
+    /* sign - teste número */
+    console.log(Math.sign(-6.8));  /* retorna -1 para números negativos */
+    console.log(Math.sign(6.8));   /* retorna 1 para números positivos */
+    console.log(Math.sign(0));   /* retorna 0 para zero */
+    console.log(Math.sign(0.1));
+    console.log("--------------------");
+
+    /* random - retorna um valor aleatório entre 0 e 1 */
+    console.log(Math.random());
+    console.log(Math.round(Math.random() * 60));  /* sorteia um número entre 0 e 60 */
+    console.log("--------------------");
+
+
+  </script>
+</body>
+</html>

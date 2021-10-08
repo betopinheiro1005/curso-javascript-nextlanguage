@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      margin: 30px;
+    }
+    #msg{
+      font-family: monospace;
+      font-size: 15px;
+      width: 420px;
+      height: 26px;
+      background-color: rgba(255,255, 0, 0.3);
+      border: 1px solid black;
+      padding: 15px;
+    }
+    #bt_exibir, #bt_ocultar{
+      padding: 10px 20px;
+      margin: 15px 15px 0px 0px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #bt_exibir, #bt_ocultar{
+      display: block;
+    }
+    #bt_ocultar{
+      display: none;
+    }
+
+
+  </style>
+  <title>Método setTimeout</title>
+</head>
+<body>
+
+  <div id="msg"></div>
+  <button id = "bt_exibir">Exibir mensagem</button>
+  <button id = "bt_ocultar">Apagar já</button>
+
+  <script>
+
+    var temporizador;
+    let mensagem = document.getElementById("msg");
+    let bt_exibir = document.getElementById("bt_exibir");
+    let bt_ocultar = document.getElementById("bt_ocultar");
+
+    bt_exibir.addEventListener("click", function(){
+      this.style.display = "none";
+      bt_ocultar.style.display = "block";
+      mensagem.innerHTML = "Essa mensagem será apagada daqui a 7 segundos...";
+      temporizador = setTimeout(() => {
+        mensagem.innerHTML = "";
+        this.style.display = "block";
+        bt_ocultar.style.display = "none";
+      }, 7000);
+    })
+
+    bt_ocultar.addEventListener("click", function(){
+      this.style.display = "none";
+      bt_exibir.style.display = "block";
+      clearTimeout(temporizador);
+      mensagem.innerHTML = "";
+    })
+
+  </script>
+</body>
+</html>

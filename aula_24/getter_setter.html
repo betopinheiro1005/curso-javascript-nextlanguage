@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métodos estáticos</title>
+</head>
+<body>
+
+  <script>
+
+    // Em Javascript não existe modificadores de acesso (public, private e protected) e nem classes abstratas
+
+    class Animal {
+
+      /* constructor é um método especial que se executa no momento de instanciar a classe. */
+      constructor(nome, genero){
+        this.nome = nome;
+        this.genero = genero;
+      }
+
+      /* métodos */
+      realizarSom (som){
+        console.log(som);
+      }
+
+      outroMetodoQualquer (action) {
+        console.log(`Executa uma ação em cima do retornado em ${action}. E retorno nome = ${this.nome}`);
+      }
+
+    }
+
+    const ratatouille = new Animal("Ratatouille", "Macho");
+    // ratatouille.realizarSom("Se somos aquilo que comemos, então só quero comer coisas boas");
+
+    const margarida = new Animal("Margarida", "Femea");
+    // margarida.outroMetodoQualquer("Bater no Donald");
+
+    // console.log(ratatouille);
+    // console.log(margarida);
+
+    /* ================================================== */
+
+    class Cachorro extends Animal{
+      constructor(nome, genero, raca){
+        super(nome, genero);
+        this.raca = raca;
+        this.regiao = null;
+      }
+
+      outroMetodoQualquer(action){
+        console.log(`Nova ação - ${action}`);
+      }
+
+      latir(){
+        console.log("au au au au au");
+      }
+
+      static oQueEh(){
+        console.log("É um mamífero carnívoro da família dos canídeos, subespécie do lobo, e talvez o mais antigo animal domesticado pelo ser humano.");
+      }
+
+      /* Getters - Setters: são métodos especiais que nos permitem estabelecer e obter os valores de atributos da nossa classe*/
+
+      get getRegiao(){
+        return this.regiao;
+      }
+
+      set setRegiao(regiao){
+        this.regiao = regiao;
+      }
+
+
+    }
+
+    const scoobyDoo = new Cachorro("Scooby Doo", "Macho", "Bloodhound");
+
+    // console.log(scoobyDoo)
+    // scoobyDoo.outroMetodoQualquer("Ação do Scooby");
+    // scoobyDoo.latir();
+
+    Cachorro.oQueEh();
+
+    /* IMPORTANTE: No Javascript set e get (nesse caso: setRegiao e getRegiao) são considerados propriedades e não métodos */
+
+    scoobyDoo.setRegiao = "Estados Unidos";
+
+    console.log(scoobyDoo.getRegiao);
+
+    console.log(scoobyDoo)
+
+  </script>
+
+
+</body>
+</html>

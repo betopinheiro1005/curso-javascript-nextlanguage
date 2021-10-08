@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Console</title>
+</head>
+<body>
+
+  <script>
+    console.log(console);
+    console.error("Isso é um erro");
+    console.warn("Isso é um aviso");
+    console.info("Isso é um informativo");
+    console.info("Um registro do que passou em nossa aplicação");
+
+    /* =========================================================== */
+
+    let nome = "Rodrigo", sobrenome = "Muniz", idade = 35;
+
+    console.log(nome);
+    console.log(sobrenome);
+    console.log(idade);
+
+    console.log(`Olá, meu nome é ${nome} ${sobrenome} e tenho ${idade} anos`);
+    console.log(`Olá, meu nome é %s %s e tenho %d anos`, nome, sobrenome, idade);
+
+    /* =========================================================== */
+
+    console.clear();  /* limpa o console */
+
+    console.log(window);
+    console.log(document); // no Firefox
+    console.dir(document); // no Chrome e Edge
+
+    /* =========================================================== */
+
+    console.clear();
+
+    console.group("Lista das aulas realizadas:");
+    console.log("Curso_Javascript_000_Introdução");
+    console.log("Curso_Javascript_001_Características-Gramática");
+    console.log("Curso_Javascript_002_Variáveis-Global-Bloco");
+    console.groupEnd();  /* Para fechar o agrupamento */
+
+    /* =========================================================== */
+
+    console.clear();
+
+    console.log(console);
+    // console.table(Object.entries(console));  /* usar no Firefox --> é mais detalhado */
+    console.table(Object.entries(console).sort());
+
+    /* =========================================================== */
+
+    console.clear();
+
+    const numeros = [1, 2, 3, 4, 5];
+    const vogais = ['a', 'e', 'i', 'o','u'];
+
+    console.table(numeros);
+    console.table(vogais);
+
+    /* =========================================================== */
+
+    console.clear();
+
+    const personagem = {
+      nome: "Joel",
+      sexo: "Masculino",
+      Jogo: ["TLOS", "TLOUS2"]
+    }
+
+    console.table(personagem);
+
+    /* =========================================================== */
+
+    console.clear();
+
+    console.time("Execução de medição de tempo");
+
+    const grandeArray = Array(1000000);
+
+    for(let i = 0; i < grandeArray.length; i++){
+      grandeArray[i] = i;
+    }
+
+    console.timeEnd("Execução de medição de tempo");
+
+    /* =========================================================== */
+
+    console.clear();
+
+    for(let i = 0; i <= 100; i++){
+      console.count("Contabilizar código for: ");
+      console.log(i);
+    }
+
+    /* =========================================================== */
+
+    console.clear();
+
+    /* teste unitário */
+
+    let x = 4;
+    let y = 2;
+
+    let provaXY = "Se espera que X seja sempre menor que Y";
+
+    console.assert(x < y, {x, y, provaXY});
+
+    /* =========================================================== */
+
+  </script>
+
+</body>
+</html>

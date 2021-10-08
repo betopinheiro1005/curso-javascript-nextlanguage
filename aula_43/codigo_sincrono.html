@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event loop - código síncrono</title>
+</head>
+<body>
+
+
+  <script>
+
+    /*
+      - Processamento single thread e multi thread
+      - Operação de IO e operação de CPU
+      - Operações concorrentes e paralelas
+      - Operações bloqueantes e não-bloqueantes
+      - Operações síncronas e assíncronas
+    */
+
+    /*
+      Em Javascript temos duis tipos de códigos:
+      - Código síncrono bloqueante
+      - Código assíncrono não bloqueante
+    */
+
+    /* Código síncrono bloqueante */
+
+    /* Função anônima auto-executável */
+
+    (function () {
+      console.log("Código síncrono");
+      console.log("Início");
+
+      function dois() {
+        console.log("Dois");
+      }
+
+      function um() {
+        console.log("Um");
+        dois();
+        console.log("Três");
+      }
+
+      um();
+      console.log("Fim");
+    }) ();
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>async await</title>
+</head>
+<body>
+
+  <script>
+
+    function quadradoPromise(valor){
+      if (typeof valor !== 'number'){
+        return Promise.reject(`O valor ${valor} inserido não é um número`);
+      }
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve({
+            valor: valor,
+            resultado: valor * valor
+          });
+        }, 0|Math.random() * 1000);
+      });
+    }
+
+    async function funcaoAssincronaDeclarada(){
+      try {
+        console.log("Início async/await");
+
+        let obj = await quadradoPromise(0);
+        console.log(`Async Function: ${obj.valor}, ${obj.resultado}`);
+
+        obj = await quadradoPromise(1);
+        console.log(`Async Function: ${obj.valor}, ${obj.resultado}`);
+
+        obj = await quadradoPromise(2);
+        console.log(`Async Function: ${obj.valor}, ${obj.resultado}`);
+
+        obj = await quadradoPromise('3');
+        console.log(`Async Function: ${obj.valor}, ${obj.resultado}`);
+
+        obj = await quadradoPromise(4);
+        console.log(`Async Function: ${obj.valor}, ${obj.resultado}`);
+
+        obj = await quadradoPromise(5);
+        console.log(`Async Function: ${obj.valor}, ${obj.resultado}`);
+
+        console.log("Fim async/await")
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    funcaoAssincronaDeclarada();
+
+    const funcaoAssincronaExpressada = async () => {
+      try {
+        console.log("Início async/await");
+
+        let obj = await quadradoPromise(6);
+        console.log(`Async Function: ${obj.valor}, ${obj.resultado}`);
+
+        obj = await quadradoPromise(7);
+        console.log(`Async Function: ${obj.valor}, ${obj.resultado}`);
+
+        obj = await quadradoPromise(8);
+        console.log(`Async Function: ${obj.valor}, ${obj.resultado}`);
+
+        obj = await quadradoPromise(9);
+        console.log(`Async Function: ${obj.valor}, ${obj.resultado}`);
+
+        obj = await quadradoPromise(10);
+        console.log(`Async Function: ${obj.valor}, ${obj.resultado}`);
+
+        obj = await quadradoPromise(11);
+        console.log(`Async Function: ${obj.valor}, ${obj.resultado}`);
+
+        console.log("Fim async/await")
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    funcaoAssincronaExpressada();
+
+  </script>
+</body>
+</html>

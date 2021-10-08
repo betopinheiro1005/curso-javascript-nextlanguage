@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expressões regulares</title>
+</head>
+<body>
+
+  <script>
+
+    let loremIpsum = "Lorem ipsum 9 dolor sit amet, consectetur adipiscing elit. Vestibulum mollis fringilla augue vitae placerat. Aliquam sagittis molestie tincidunt. Praesent rutrum placerat enim vel vehicula. In mollis placerat nibh, eget mattis diam pulvinar ac. Curabitur pretium mollis quam ut eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus eu hendrerit leo. Maecenas ornare convallis erat, id finibus risus cursus a. Nulla bibendum cursus tortor sed scelerisque. Nullam et hendrerit diam, non molestie orci. Sed sagittis, neque nec dapibus suscipit, elit lacus pretium lacus, vel volutpat orci neque vitae nisl. Maecenas suscipit ex massa, ac cursus lectus volutpat a. Interdum et malesuada fames ac ante ipsum primis in faucibus.";
+
+    let expRegular5 = new RegExp(/praesent/i);
+
+    console.log(expRegular5.test(loremIpsum));
+    console.log(expRegular5.exec(loremIpsum));
+
+  </script>
+</body>
+</html>

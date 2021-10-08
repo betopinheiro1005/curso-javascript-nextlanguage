@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Declaração de Arrays</title>
+</head>
+<body>
+
+  <script>
+    const array1 = [];  /* declarando um array vazio */
+    console.log(array1);
+
+    const dados = ["Rodrigo Mnuniz", 35, true, ["corrida", "capoeira", "musculação"]]
+    console.log(dados);
+    console.log(dados.length);
+
+    console.log("Nome: " + dados[0]);
+    console.log("idade " + dados[1]);
+    console.log("É casado? : " + dados[2]);
+    console.log("Atividade favorita: " + dados[3][1]);
+
+    /* usando o método of */
+
+    const array2 = Array.of("Bruno Lopes", 27, false, ["caminhar", "dançar", "nadar", "ler"]);
+    console.log(array2);
+
+    /* declaração em desuso */
+
+    const array3 = new Array();
+    console.log(array3);
+
+  </script>
+
+</body>
+</html>

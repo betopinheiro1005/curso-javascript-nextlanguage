@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funções anônimas IIFE</title>
+</head>
+<body>
+
+  <script>
+    /* IIFE - Immediately invoked Function Expression */
+    /* São funções anônimas autoexecutáveis. Não é necessário fazer a chamada */
+
+    /* maneira clássica */
+
+    (function () {
+      console.log("Primeira função IIFE");
+    }) ();  /* O uso do ponto-e-vírgula é obrigatório */
+
+    (function (d, w, c) {
+      console.log("Segunda função IIFE");
+      console.log(d);
+      console.log(w);
+      console.log(c);
+      c.log("impressão com o C");
+    }) (document, window, console);
+
+    /* Crockford (Autor do livro - The Good Parts) */
+
+    ((function () {
+      console.log("Função IIFE - Crockford");
+    }) ());
+
+    /* Unária */
+
+    +function () {
+      console.log("Função IIFE - unária");
+    } ();
+
+    /* Facebook */
+
+    !function () {
+      console.log("Função IIFE - Facebook");
+    } ();
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
