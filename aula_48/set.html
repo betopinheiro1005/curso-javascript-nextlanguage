@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set</title>
+</head>
+<body>
+
+  <h1>Set</h1>
+  <h2>Novos tipos de dados</h2>
+
+  <script>
+
+    /* set é uma estrutura de dados parecida com um array que só permite salvar dados únicos (não permite duplicação de elementos) */
+
+    const set = new Set([1,2,3,3,4,5,true, false, false,{},{},"olá","OLÁ"]);
+    console.log(set);
+    console.log(set.size);
+
+    const setDois = new Set();
+    setDois.add(1);
+    setDois.add(2);
+    setDois.add(2);
+    setDois.add(3);
+    setDois.add(true);
+    setDois.add(false);
+    setDois.add(true);
+    setDois.add({});
+
+    console.log(setDois);
+    console.log(setDois.size);
+
+    console.log("===========");
+
+    for(item of set){
+      console.log(item);
+    }
+
+    console.log("===========");
+
+    setDois.forEach(item => console.log(item));
+
+    console.log(set[0]);  // retorna undefined
+
+    let arrSet = Array.from(set);
+
+    console.log(arrSet);
+    console.log(arrSet[0]);
+
+    console.log("===========");
+
+    set.delete("OLÁ");
+    console.log(set);
+
+    console.log("===========");
+
+    console.log(set.has("olá"));
+    console.log(set.has("OLÁ"));
+
+    console.log("===========");
+
+    setDois.clear();
+    console.log(setDois);
+
+
+  </script>
+</body>
+</html>

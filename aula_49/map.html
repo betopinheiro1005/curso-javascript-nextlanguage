@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map</title>
+</head>
+<body>
+
+  <h1>Map</h1>
+  <h2>Novos tipos de dados</h2>
+
+  <script>
+    /* map guarda uma coleção de dados relacionados entre si */
+
+    const mapa = new Map();
+    mapa.set("nome", "Rodrigo");
+    mapa.set("sobrenome", "Muniz");
+    mapa.set("idade", 35);
+
+    console.log(mapa);
+    console.log(mapa.size);
+
+    console.log("============================");
+
+    console.log(mapa.has("email"));
+    console.log(mapa.has("nome"));
+
+    console.log("============================");
+
+    console.log(mapa.get("nome"));
+    mapa.set("idade", 36);
+
+    console.log(mapa);
+
+    console.log("============================");
+
+    console.log(mapa.get("idade"));
+
+    console.log("============================");
+
+    mapa.delete("idade");
+    console.log(mapa);
+
+    console.log("============================");
+
+    /* map é iterável */
+    /* map é um objeto que permite ter uma coleção de chave e valor */
+    /* Em um objeto primitivo o nome de todas as propriedades desse objeto são strings. No map podemos gerar chaves que não sejam cadeias de texto */
+
+    mapa.set(10, "dez");
+    mapa.set(false, false);
+    mapa.set({}, {});
+
+    for(let[key, value] of mapa){
+      console.log(`Chave: ${key} - Valor: ${value}`);
+    }
+
+    console.log("=============================");
+
+    const mapaDois = new Map([
+      ["Curso", "Programação Javascript"],
+      ["Professor", "Rodrigo Muniz"],
+      ["aula", 49],
+      [null, "nulo"]
+    ]);
+
+    console.log(mapaDois);
+
+    console.log("=============================");
+
+    const chavesMapaDois = [...mapaDois.keys()];
+    const valoresMapaDois = [...mapaDois.values()];
+
+    console.log(chavesMapaDois, valoresMapaDois);
+
+    /* set parece mais com array, map parece mais com objeto */
+
+  </script>
+</body>
+</html>
