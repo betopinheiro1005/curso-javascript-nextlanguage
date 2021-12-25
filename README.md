@@ -1,9 +1,7 @@
 # Curso de Javascript
 ## Next Language (Rodrigo Muniz)
 
-### Link dos vídeos do curso
-
-<https://www.youtube.com/watch?v=og9iiuOZ8BE&list=PLxpyQahHwmJIYMZPmcMWgPdQYtNAXjEv2>
+### [Vídeos do curso](https://www.youtube.com/watch?v=og9iiuOZ8BE&list=PLxpyQahHwmJIYMZPmcMWgPdQYtNAXjEv2)
 
 ### Lista de aulas
 
